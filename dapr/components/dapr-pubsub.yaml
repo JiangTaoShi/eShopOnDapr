@@ -1,0 +1,19 @@
+apiVersion: dapr.io/v1alpha1
+kind: Component
+metadata:
+  name: pubsub
+  namespace: dapr
+spec:
+  type: pubsub.rabbitmq
+  version: v1
+  metadata:
+    - name: host
+      value: "amqp://guest:guest@localhost:6672/dapr"
+    - name: durable
+      value: true
+    - name: deliveryMode
+      value: "2"
+    - name: prefetchCount
+      value: "1"
+    - name: deletedWhenUnused
+      value: "false"
