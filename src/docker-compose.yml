@@ -1,0 +1,9 @@
+version: '3.0'           #固定格式，表示docker-compose的版本号
+services:                #固定格式，所有服务的入口
+  test-go-server:
+    image: test-go-server
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    ports:
+      - 9090:9090
