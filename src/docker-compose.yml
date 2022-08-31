@@ -1,9 +1,18 @@
 version: '3.0'           #固定格式，表示docker-compose的版本号
 services:                #固定格式，所有服务的入口
-  test-go-server:
-    image: test-go-server
+  test-goserver:
+    image: test-goserver
     build:
       context: ./
       dockerfile: Dockerfile
     ports:
       - 9090:9090
+#  test-goserver-dapr:
+#    image: "daprio/daprd:latest"
+#    command: [ "./daprd",
+#               "-app-id", "test-goserver",
+#               "-app-port", "9090",
+#               "-dapr-grpc-port", "50002" ]
+#    depends_on:
+#      - test-goserver
+#    network_mode: "service:test-goserver"

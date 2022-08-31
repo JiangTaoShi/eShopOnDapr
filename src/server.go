@@ -18,10 +18,9 @@ func main() {
 	s := daprd.NewServiceWithMux(":9090", r)
 
 	sub := &common.Subscription{
-		PubsubName: "messages",
+		PubsubName: "rabbitmq",
 		Topic:      "topic1",
 	}
-
 	s.AddTopicEventHandler(sub, eventHandler)
 	log.Println("start success")
 	if err := s.Start(); err != nil && err != http.ErrServerClosed {
