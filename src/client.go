@@ -12,8 +12,9 @@ func main() {
 	}
 	ctx := context.Background()
 	data := []byte("hello")
-	if err := client.PublishEvent(ctx, "component-name", "topic-name", data); err != nil {
+	if err := client.PublishEvent(ctx, "rabbitmq", "topic1", data); err != nil {
 		panic(err)
 	}
+
 	defer client.Close()
 }

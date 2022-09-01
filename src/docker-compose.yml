@@ -6,13 +6,17 @@ services:                #固定格式，所有服务的入口
       context: ./
       dockerfile: Dockerfile
     ports:
-      - 9090:9090
-#  test-goserver-dapr:
-#    image: "daprio/daprd:latest"
-#    command: [ "./daprd",
-#               "-app-id", "test-goserver",
-#               "-app-port", "9090",
-#               "-dapr-grpc-port", "50002" ]
-#    depends_on:
-#      - test-goserver
-#    network_mode: "service:test-goserver"
+      - 9091:9091
+    networks:
+      - hello-dapr
+  test-goserver-dapr:
+    image: "daprio/daprd:latest"
+    command: [ "./daprd",
+               "-app-id", "test-goserver",
+               "-app-port", "9091",
+               "-dapr-http-port", "9092" ]
+    depends_on:
+      - test-goserver
+    network_mode: "service:test-goserver"
+networks:
+  hello-dapr:

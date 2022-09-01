@@ -15,11 +15,12 @@ func main() {
 	r.HandleFunc("/test", func(w http.ResponseWriter, r *http.Request) {
 		json.NewEncoder(w).Encode("success")
 	})
-	s := daprd.NewServiceWithMux(":9090", r)
+	s := daprd.NewServiceWithMux(":9091", r)
 
 	sub := &common.Subscription{
 		PubsubName: "rabbitmq",
 		Topic:      "topic1",
+		Route:      "/topic1",
 	}
 	s.AddTopicEventHandler(sub, eventHandler)
 	log.Println("start success")
