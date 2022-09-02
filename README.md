@@ -1,6 +1,6 @@
 # Go-dapr
 
-A sample Go distributed application based on *[Go-dapr](https://github.com/JiangTaoShi/go-dapr)*, powered by [Dapr](https://dapr.io/).
+A sample Go distributed application based on *[eShopOnDapr](https://github.com/JiangTaoShi/eShopOnDapr)*, powered by [Dapr](https://dapr.io/).
 
 # Getting started
 
