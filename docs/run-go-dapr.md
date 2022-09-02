@@ -1,8 +1,8 @@
-# Running Go-dapr
+# Running eShopOnDapr
 
-## Run Go-dapr from the CLI
+## Run eShopOnDapr from the CLI
 
-The root folder of the repository contains [Docker Compose](https://docs.docker.com/compose/) files to run the solution locally. The `docker-compose.yml` file contains the definition of all the images needed to run go-dapr. The `docker-compose.override.yml` file contains the base configuration for all images of the previous file.
+The root folder of the repository contains [Docker Compose](https://docs.docker.com/compose/) files to run the solution locally. The `docker-compose.yml` file contains the definition of all the images needed to run eShopOnDapr. The `docker-compose.override.yml` file contains the base configuration for all images of the previous file.
 
 To start go-dapr from the CLI, run the following command from the root folder:
 
