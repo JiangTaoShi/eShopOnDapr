@@ -1,4 +1,4 @@
-# Go-dapr
+# eShopOnDapr
 
 A sample Go distributed application based on *[eShopOnDapr](https://github.com/JiangTaoShi/eShopOnDapr)*, powered by [Dapr](https://dapr.io/).
 
@@ -6,4 +6,4 @@ A sample Go distributed application based on *[eShopOnDapr](https://github.com/J
 
 Go-dapr runs in containers and requires Docker to run. There are various ways to start the application: 
 
-- [Run Go-dapr from the CLI](https://github.com/JiangTaoShi/go-dapr/blob/main/docs/run-go-dapr.md)
+- [Run eShopOnDapr from the CLI](https://github.com/JiangTaoShi/eShopOnDapr/blob/main/docs/run-go-dapr.md)
