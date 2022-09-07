@@ -1,6 +1,8 @@
 package eventBus
 
-import "time"
+import (
+	"time"
+)
 
 type IntegrationEvent struct {
 	Id           string

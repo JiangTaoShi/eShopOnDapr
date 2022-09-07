@@ -7,15 +7,13 @@ spec:
   type: pubsub.rabbitmq
   version: v1
   metadata:
-  - name: host
-    value: "amqp://rabbitmq:5672"
-  - name: durable
-    value: "false"
-  - name: deletedWhenUnused
-    value: "false"
-  - name: autoAck
-    value: "false"
-  - name: reconnectWait
-    value: "0"
-  - name: concurrency
-    value: parallel
+    - name: host
+      value: "amqp://guest:guest@localhost:6672/dapr"
+    - name: durable
+      value: true
+    - name: deliveryMode
+      value: "2"
+    - name: prefetchCount
+      value: "1"
+    - name: deletedWhenUnused
+      value: "false"
