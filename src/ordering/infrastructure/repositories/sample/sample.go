@@ -11,6 +11,6 @@ type SampleRepository struct {
 	db mysql.Repo
 }
 
-func New(db mysql.Repo) (ISampleRepository, error) {
-	return &SampleRepository{db: db}, nil
+func New() ISampleRepository {
+	return &SampleRepository{db: nil}
 }

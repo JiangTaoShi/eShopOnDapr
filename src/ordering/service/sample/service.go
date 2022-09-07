@@ -5,9 +5,9 @@ import (
 )
 
 type SampleService struct {
-	reposity sample.ISampleRepository
+	Reposity sample.ISampleRepository
 }
 
-func New() (SampleService, error) {
-	return SampleService{}, nil
+func New() SampleService {
+	return SampleService{Reposity: sample.New()}
 }

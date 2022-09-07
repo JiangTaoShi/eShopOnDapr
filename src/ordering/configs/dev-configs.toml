@@ -12,11 +12,11 @@
       maxopenconn = 10
     [mysql.read]
       addr = "127.0.0.1:3306"
-      name = "go_gin_api"
-      pass = "123456789"
+      name = "test"
+      pass = "1qazvfr4"
       user = "root"
     [mysql.write]
       addr = "127.0.0.1:3306"
-      name = "go_gin_api"
-      pass = "123456789"
+      name = "test"
+      pass = "1qazvfr4"
       user = "root"

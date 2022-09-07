@@ -24,6 +24,7 @@ var (
 )
 
 var _ Repo = (*dbRepo)(nil)
+var DBRepo Repo
 
 type Repo interface {
 	i()
