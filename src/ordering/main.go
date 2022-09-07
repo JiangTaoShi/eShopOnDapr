@@ -1,9 +1,9 @@
-package ordering
+package main
 
 import (
 	"fmt"
+	"github.com/JiangTaoShi/eShopOnDapr/ordering/configs"
 	"github.com/JiangTaoShi/eShopOnDapr/ordering/router"
-	"github.com/JiangTaoShi/eShopOnDapr/pkg/dapr"
 	"github.com/gin-gonic/gin"
 	"log"
 	"net/http"
@@ -11,12 +11,13 @@ import (
 )
 
 func init() {
-	dapr.Setup()
+	//dapr.Setup()
 }
 
 func main() {
-	gin.SetMode(ServerSetting.RunMode)
 
+	ServerSetting := configs.Get().Server
+	gin.SetMode(ServerSetting.RunMode)
 	routersInit := router.InitRouter()
 	readTimeout := ServerSetting.ReadTimeout
 	writeTimeout := ServerSetting.WriteTimeout
